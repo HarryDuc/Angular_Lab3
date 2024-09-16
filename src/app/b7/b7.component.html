@@ -1,0 +1,53 @@
+<!-- <div>
+  <div class="row">
+    <div class="col-md-6 mt-5">
+      <img src="https://th.bing.com/th/id/OIP.S2W19xappbvIzlxm-QP8WQHaHV?w=188&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt=""
+        style="border-radius: 60%;">
+    </div>
+    <div class="col-md-6">
+      <h1>{{student.pic}}</h1>
+      <div class="row">
+        <div class="list-group">
+          <div class="col-md-12">
+            <div class="list-group-item">
+              <p>Ho va ten: {{student.fullname}}</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="list-group-item">
+              <p>Nam sinh: {{student.birthday}}</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="list-group-item">
+              <p>Gioi tinh: {{student.gender}}</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="list-group-item">
+              <p>Diem: {{student.mark}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+@for (item of student; track $index) {
+  <div>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <img src="{{item.pic}}" alt="" width="200px" height="200px" align="right" style="border-radius: 60%;">
+      </div>
+      <div class="col-md-6 mt-3">
+        <div class="list-group">
+          <div class="list-group-item">Ho va ten: {{item.fullname}}</div>
+          <div class="list-group-item">Nam sinh: {{item.birthday}}</div>
+          <div class="list-group-item">Gioi tinh: {{item.gender}}</div>
+          <div class="list-group-item">Diem: {{item.mark}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
